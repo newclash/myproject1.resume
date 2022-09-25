@@ -90,12 +90,14 @@
 
 <script>
     function take() {
-        if (cal.display.value < 10) {
-            cal.display.value = '';
-        } else {
-            let rtn = Math.floor(cal.display.value / 10);
-            cal.display.value = rtn;
-        }
+        function take() {
+        let x = cal.display.value;
+        // console.log(x);
+        // console.log(typeof(x));
+        x = x.slice(0, -1);
+        // console.log(x);
+        cal.display.value = x;
+    }
     }
 </script>
 
